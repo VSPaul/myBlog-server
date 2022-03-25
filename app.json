@@ -1,0 +1,12 @@
+{
+    "name": "My Super Blog",
+    "description": "My app",
+    "repository": "https://git.heroku.com/my-super-blog.git",
+    "logo": "",
+    "keywords": [
+        "node",
+        "express",
+        "anothertag"
+    ],
+    "image": "heroku/nodejs"
+}
