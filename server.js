@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static(__dirname));
 app.use(cookieParser());
 
-const whitelist = ['http://localhost:3002', 'https://my-super-blog.netlify.app/', 'https://vspaul.github.io/myBlog-client'];
+const whitelist = ['http://localhost:3002', 'https://my-super-blog.netlify.app', 'https://vspaul.github.io'];
 app.use(cors({
     origin: function (origin, callback) {
         console.log('ORIGIN MF', origin, whitelist.indexOf(origin), whitelist)
