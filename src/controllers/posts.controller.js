@@ -1,4 +1,5 @@
-const fs = require('fs')
+const fs = require('fs');
+const path = require('path');
 const matter = require('gray-matter');
 
 exports.getAllPosts = async (req, res) => {
@@ -15,10 +16,12 @@ exports.getAllPosts = async (req, res) => {
     }
 };
 
+
 exports.getPostContent = async (req, res) => {
     console.log(Date(), '\n', "CALLING GET POST CONTENT");
     try {
-        const str = fs.readFileSync(__dirname + `/posts/${req.body.post}`, 'utf8');
+        const filesPath = path.join(__dirname, '../posts')
+        const str = fs.readFileSync(`${filesPath}/${req.body.post}`, 'utf8');
         res.status(200).send(matter(str));
         // res.status(200).send({content:str});
         // console.log('ceva', str)
