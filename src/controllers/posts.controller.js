@@ -18,7 +18,7 @@ exports.getAllPosts = async (req, res) => {
 exports.getPostContent = async (req, res) => {
     console.log(Date(), '\n', "CALLING GET POST CONTENT");
     try {
-        const str = fs.readFileSync(__dirname + `./../posts/${req.body.post}`, 'utf8');
+        const str = fs.readFileSync(__dirname + `/posts/${req.body.post}`, 'utf8');
         res.status(200).send(matter(str));
         // res.status(200).send({content:str});
         // console.log('ceva', str)
