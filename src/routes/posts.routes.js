@@ -19,4 +19,8 @@ module.exports = (app) => {
     app.post("/getPostContent",
         controller.getPostContent
     );
+
+    app.post("/addPost",
+        controller.addPost
+    );
 };
